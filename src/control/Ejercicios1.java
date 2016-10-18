@@ -1,5 +1,7 @@
 package control;
 
+import modelo.Persona;
+
 public class Ejercicios1 {
 
 	public static void main(String[] args) {
@@ -27,7 +29,8 @@ public class Ejercicios1 {
 		 */
 		// int numero = 7771;
 		// ej1.listarPrimos(100);
-		ej1.crearHebras(3);
+		//ej1.crearHebras(3);
+		ej1.creaListaPersonas();
 	}
 
 	public void crearHebras(int cuantas) {
@@ -42,9 +45,21 @@ public class Ejercicios1 {
 
 	public void creaListaPersonas() {
 		// crea 3 personas
+		Persona p1 =new Persona ("45331025A", "Eric", 'M', null);
+		Persona p2 =new Persona ("45331026G", "Ruth", 'F', null);
+		Persona p3 =new Persona ("34563234V", "Pepe", 'M', null);
 		// define el array para 20 personas
+		Persona[] listaPersonas = new Persona [20];
+		
 		// asigna las personas al array
-		// muestra el nif de las 3 personas
+		listaPersonas[9] = p1;
+		listaPersonas[1] = p2;
+		listaPersonas[20] = p3;
+		
+		// muestra el nombre de las 3 personas
+		for (int i = 0; i < listaPersonas.length; i++){
+			System.out.println(listaPersonas[i].getNombre());
+		}
 	}
 
 	public void listarPrimos(int cuantos) {
